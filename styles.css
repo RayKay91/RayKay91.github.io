@@ -19,29 +19,51 @@ body {
 a {
   color: white;
   font-family: "Cereal-book";
+  text-decoration: none;
 }
 
 p {
   font-family: "Cereal-book";
+  color: #d7d7d7;
 }
 
 header {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 7.5em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #1b1b1b;
+  z-index: 1;
 }
-header i {
+header .socials {
   margin: 0.75em;
   font-size: 1.5rem;
+  transition: all 0.3s;
+}
+header .socials:hover {
+  transform: scale(1.5);
 }
 header .socials-container {
   margin-right: 5%;
+}
+header .email {
+  transition: all 0.3s;
+  margin-left: 5%;
+}
+header .email i {
+  margin-right: 0.75em;
+}
+header .email:hover {
+  transform: scale(1.2);
 }
 
 .hero {
   display: flex;
   justify-content: space-between;
-  margin: 0 3.5em 0;
+  margin: 0 6em 4em;
 }
 .hero .hero__text-wrapper {
   display: inherit;
@@ -49,7 +71,6 @@ header .socials-container {
   justify-content: center;
   padding: 2.5em;
   width: 55%;
-  border: 1px solid lime;
 }
 .hero .hero__text-wrapper .hero__text {
   -webkit-text-fill-color: transparent;
@@ -60,12 +81,12 @@ header .socials-container {
 }
 .hero .hero__text-wrapper h1 {
   font-family: "Cereal-bold";
-  font-size: 4vw;
+  font-size: 3.5vw;
   margin-bottom: 1em;
   letter-spacing: 1.25px;
 }
 .hero .hero__text-wrapper p {
-  font-size: 2.75vw;
+  font-size: 2.5vw;
 }
 .hero .hero__graphic {
   width: 45%;
@@ -73,6 +94,51 @@ header .socials-container {
 .hero .hero__graphic #lottie {
   width: 100%;
   height: auto;
+}
+
+.about__text {
+  margin: 0 7em 1em;
+  font-size: max(1.6vw, 1rem);
+}
+.about__text:last-of-type {
+  margin-bottom: 4em;
+}
+
+@media screen and (max-width: 715px) {
+  .about__text {
+    margin: 0 4em 1em;
+  }
+}
+.skillset > p {
+  text-align: center;
+  font-size: max(1.5vw, 1rem);
+  margin-bottom: 1.5em;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 3em 3em;
+}
+
+.skill {
+  margin: 1em;
+  font-family: "Cereal-book";
+  color: #d7d7d7;
+  font-size: 1.1rem;
+}
+
+hr {
+  border: 1px solid #414141;
+  width: 75%;
+  margin: 0 auto 4em;
 }
 
 /*# sourceMappingURL=styles.css.map */
