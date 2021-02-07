@@ -1,0 +1,70 @@
+*, *::after, *::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+@font-face
+    font-family: 'Cereal-bold'
+    src: url(assets/fonts/AirbnbCereal-Bold.ttf) format('truetype')
+@font-face
+    font-family: 'Cereal-book'
+    src: url(assets/fonts/AirbnbCereal-Book.ttf) format('truetype')
+
+//globals
+
+body
+    background-color: #1b1b1b
+
+a
+    color: white
+    font-family: 'Cereal-book'
+p
+    font-family: 'Cereal-book'
+header
+
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 7.5em
+    i
+        margin: 0.75em
+
+        font-size: 1.5rem
+
+    .socials-container
+
+        margin-right: 5%
+
+.hero
+    display: flex
+    justify-content: space-between
+    margin: 0 3.5em 0
+
+    .hero__text-wrapper
+        display: inherit
+        flex-flow: column wrap
+        justify-content: center
+        padding: 2.5em
+        width: 55%
+        border: 1px solid lime
+
+        .hero__text
+            -webkit-text-fill-color: transparent
+            text-fill-color: transparent
+            -webkit-background-clip: text
+            background-clip: text
+            background-image: linear-gradient(45deg, #55ffb2, #53bdff)
+
+        h1
+            font-family: 'Cereal-bold'
+            font-size: 4vw
+            margin-bottom: 1em
+            letter-spacing: 1.25px
+
+        p
+            font-size: 2.75vw
+
+    .hero__graphic
+        width: 45%
+        #lottie
+            width: 100%
+            height: auto
