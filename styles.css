@@ -310,6 +310,7 @@ hr {
 }
 .stack .tech {
   margin: 0 0.2em 0.5em;
+  margin-left: 0;
   color: #1b1b1b;
   font-family: "Cereal-book";
   background-color: #fff19fd4;
