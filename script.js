@@ -1,6 +1,3 @@
-//animate on scroll
-AOS.init();
-////////
 
 //////// greeting script
 const greeting = document.querySelector('.greeting');

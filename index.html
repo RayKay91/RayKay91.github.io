@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
     <title>Ray's Portfolio</title>
@@ -18,7 +19,7 @@
         </div>
     </header>
     <main>
-        <section class='hero'>
+        <section class='hero' data-aos="flip-right">
             <div class="hero__text-wrapper">
                 <h1>👋 <span class="greeting hero__text"></span></h1>
                 <p class='hero__text'>I'm Ray, a software engineer, web developer and App developer.</p>
@@ -27,7 +28,7 @@
                 <lottie-player id='lottie' src="./assets/graphics/lf30_editor_sax4zq9w.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
             </div>
         </section>
-        <section class="about">
+        <section class="about" data-aos="flip-up">
             <p class="about__text">Welcome to my site! I'm Ray, a software engineer and web developer with experience in both the front-end and the back-end.</p>
             
             <p class="about__text">I've always loved solving puzzles and find that programming isn'
@@ -54,6 +55,7 @@
                     <li class="skill">Python</li>
                     <li class="skill">Wordpress</li>
                     <li class="skill">WooCommerce</li>
+                    <li class="skill">Figma</li>
                     <li class="skill">Illustrator</li>
                     <li class="skill">Photoshop</li>
                 </ul>
@@ -66,41 +68,250 @@
             <h3>Take a quick peek at some of the things I've worked on</h3>
             <i class="fas fa-angle-double-down"></i>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-right">
                 <div class="project__graphic">
-                    <iframe
-                    src="https://www.youtube.com/embed/pMnLhMFUEAk?rel=0"
-                    loading="lazy">
-                </iframe>
+                    <img src="./assets/graphics/Haslam logistics.png" alt="Haslam Logistics Site">
                 </div>
                 <div class="project__text">
                     <h5>Courier Company Website</h5>
                     <p>
-                        Upon receiving the requirements for the website from the client, I designed a brand identity consisting of industry expected elements. The logo was designed images with the logo were photoshopped by me.
-
-                        I chose Gatsby to build the site due to its SSG capabilities, image optimisation capabilites, snappy feel, and excellent SEO.
-
-                        External APIs were used to allow for an interactive map in the footer and a live-chat feature.
-
-                        Some motion was peppered throughout the site to make it a little more lively.
+                        Upon receiving the requirements for the website from the client, I designed a brand identity consisting of industry expected elements. The logo was designed in Illustrator, and Photoshop was used to place the logo on the images of vehicles. 
                     </p>
-                    <h6>Technologies used:</h6>
                     <p>
-                        <strong>React</strong>,
-                        <strong>Gatsby JS + GraphQL</strong>,
-                        <strong>Framer Motion</strong>,
-                        <strong>SCSS</strong>,
-                        <strong>Netlify</strong>,
-                        <strong>External APIs for map and live chat</strong>.
+                        I chose Gatsby to build the site due to its SSG capabilities, image optimisation capabilites, snappy feel, and excellent SEO.
                     </p>
-                    <a target="_blank" href="https://HaslamLogistics.netlify.app"
-                    >Visit site
-                    </a>
+                    <p>
+                        External APIs were used to allow for an interactive map in the footer and a live-chat feature.
+                    </p>
+                    <p>
+                        Some motion was peppered throughout the site to provide some visual interest.
+                    </p>
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">React</li>
+                        <li class="tech">Gatsby JS + GraphQL</li>
+                        <li class="tech">SCSS</li>
+                        <li class="tech">Framer Motion</li>
+                        <li class="tech">APIs for map and live chat</li>
+                        <li class="tech">Netlify</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" target="_blank" href="https://HaslamLogistics.netlify.app"
+                            >Visit site
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-left">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/todo-react.png" alt="todo app">
+                </div>
+                <div class="project__text">
+                    <h5>React To Do App</h5>
+                    <p>
+                        A simple to do list utility Single Page Application. You can add and delete to dos and mark them as done. There is an error check for an empty field being submitted.  
+                    </p>
+                    <p>
+                        The app was made initially using class based components and then refactored to use React hooks. The version that uses hooks is saved on a separate branch.
+                    </p>
+                    <p>
+                        The branch that uses hooks has also been updated to use Redux for state management. Overkill? Sure. But I did it to practice what I had learnt from Redux and to practice integrating it into an app without global state management. 
+                    </p>
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">React</li>
+                        <li class="tech">Emotion (for styling)</li>
+                        <li class="tech">Redux</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/reactTodoApp">Visit GitHub Repo</a>
+                            <a class="project__link" target="_blank" href="https://raykay91-todo-app.netlify.app/"
+                            >Visit site
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/timetable-app.png" alt="timetable app">
+                </div>
+                <div class="project__text">
+                    <h5>Timetable and Clock Web App / Desktop App</h5>
+                    <p>
+                        An app I created for a local mosque. The web app scrapes data from the official website but presents it in a much more appealing format. It also provides notifications.
+                    </p>
+                    <p>
+                        Caching is implemented in the web app to prevent unneccessary requests being made to the website the data is scraped from and to make the app more performant and efficient. The data is also output as a JSON in a simple API. This is used by the desktop and mobile apps.
+                    </p>
+                    <p>
+                        The desktop app is made using Electron JS and also provides local notifications.
+                    </p>
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">Node JS</li>
+                        <li class="tech">Web Scraping</li>
+                        <li class="tech">APIs</li>
+                        <li class="tech">Caching</li>
+                        <li class="tech">Electron JS</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/prayer-api">Visit GitHub Repo (web app)</a>
+                            <a class="project__link" href="https://github.com/RayKay91/prayerTimetable">Visit GitHub Repo (desktop app)</a>
+                            <a class="project__link" target="_blank" href="https://wiseprayertimes.herokuapp.com/"
+                            >Visit site
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-left">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/Prayer App.png" alt="mobile timetable app">
+                </div>
+                <div class="project__text">
+                    <h5>Cross-Platform Mobile App</h5>
+                    <p>
+                        A native mobile app of the timetable app that works on iOS and Android.
+                    </p>
+                    <p>
+                        The app has local notifications, and uses the Twitter API 2.0 to fetch and display the latest tweets.
+                    </p>
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">React Native</li>
+                        <li class="tech">Expo</li>
+                        <li class="tech">Twitter API</li>
+                    </ul>
+                        <a class="project__link" href="https://github.com/RayKay91/mobile-prayer-app">Visit GitHub Repo</a>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/burreato.png" alt="burreato restaurant site">
+                </div>
+                <div class="project__text">
+                    <h5>Responsive Website For Restaurant</h5>
+                    <p>
+                        A responsive website for a mexican eatery I actually owned. The website is almost exactly the same as when it was open, but back then it was made with a drag and drop builder, now it's been made from scratch using HTML and CSS rather than dragging and dropping.
+                    </p>
+                    
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">HTML</li>
+                        <li class="tech">CSS</li>
+                        <li class="tech">Netlify</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/mexicanEatery">Visit GitHub Repo</a>
+                            <a class='project__link' href="https://burreato.netlify.app/">Visit site</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-left">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/github-finder.png" alt="github user finder app">
+                </div>
+                <div class="project__text">
+                    <h5>GitHub User Finder App</h5>
+                    <p>
+                        A search app for Github users. Enter a username and see the results populate. You can then see more info about that particular user. Made using the Github API. there is also navigation in this React app using React-Router.
+                    </p>
+                    
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">React</li>
+                        <li class="tech">React-Router</li>
+                        <li class="tech">GitHub API</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/github-user-finder">Visit GitHub Repo</a>
+                            <a class='project__link' href="https://my-github-user-finder.netlify.app/">Visit site</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/blog.png" alt="blog website">
+                </div>
+                <div class="project__text">
+                    <h5>Public Blog with REST API and MVC</h5>
+                    <p>
+                        An MVC based blog website with data persistence and CRUD capabilities through a REST API. Hosted on Heroku.
+                    </p>
+                    
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">Express JS</li>
+                        <li class="tech">Mongo DB</li>
+                        <li class="tech">MVC</li>
+                        <li class="tech">REST API</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/myBlog">Visit GitHub Repo</a>
+                            <a class='project__link' href="https://safe-island-35206.herokuapp.com/">Visit site</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-left">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/weather-checker.png" alt="blog website">
+                </div>
+                <div class="project__text">
+                    <h5>Weather Checker React App</h5>
+                    <p>
+                        A simple weather checker made in React fetching data from the Open Weather Map API. Styling is done using Materialize CSS.
+                    </p>
+                    
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">React</li>
+                        <li class="tech">Materialize CSS</li>
+                        <li class="tech">Open Weather Map API</li>
+                    </ul>
+                        <div class="project__link--wrapper">
+                            <a class="project__link" href="https://github.com/RayKay91/weatherApp">Visit GitHub Repo</a>
+                            <a class='project__link' href="https://weather-checker-app.netlify.app">Visit site</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="project" data-aos="fade-right">
+                <div class="project__graphic">
+                    <img src="./assets/graphics/python webscraping.png" alt="blog website">
+                </div>
+                <div class="project__text">
+                    <h5>Python Web Scraper</h5>
+                    <p>
+                        A simple web scraper made using Python and Beautiful Soup. When the script is executed it fetches the headlines from the Reuters news website, and outputs them in to a .csv file.
+                    </p>
+                    
+                    <h6>Technologies used</h6>
+                    <ul class='stack'>
+                        <li class="tech">Python</li>
+                        <li class="tech">Beautiful Soup</li>
+                        <li class="tech">Web Scraping</li>
+                    </ul>
+                        <a class="project__link" href="https://github.com/RayKay91/python-webscraper">Visit GitHub Repo</a>
+                    </div>    
                 </div>
             </div>
         </section>
     </main>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <footer>
+        <p>
+        © 2020 made with ❤️ in 🇬🇧
+        </p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./script.js"></script>
 </body>

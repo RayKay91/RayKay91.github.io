@@ -81,12 +81,12 @@ header .email:hover {
 }
 .hero .hero__text-wrapper h1 {
   font-family: "Cereal-bold";
-  font-size: 3.5vw;
+  font-size: max(3.5vw, 1.5rem);
   margin-bottom: 1em;
-  letter-spacing: 1.25px;
+  letter-spacing: 0.5px;
 }
 .hero .hero__text-wrapper p {
-  font-size: 2.5vw;
+  font-size: max(2.5vw, 1.1rem);
 }
 .hero .hero__graphic {
   width: 45%;
@@ -97,6 +97,34 @@ header .email:hover {
   animation: bounce-slow 3s infinite;
 }
 
+@media screen and (max-width: 920px) {
+  header {
+    margin-bottom: 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+    width: 90vw;
+    margin: 0 auto 2em;
+  }
+  .hero .hero__text-wrapper {
+    padding: 0;
+    text-align: center;
+  }
+  .hero .hero__graphic {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 641px) {
+  .hero {
+    margin: 0 auto 2em;
+  }
+  .hero .hero__text-wrapper {
+    width: 80%;
+  }
+}
 .about__text {
   margin: 0 7em 1em;
   font-size: max(1.6vw, 1rem);
@@ -107,7 +135,13 @@ header .email:hover {
 
 @media screen and (max-width: 715px) {
   .about__text {
-    margin: 0 4em 1em;
+    margin: 0 3em 1em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about__text {
+    margin: 0 auto 1em;
+    padding: 0 1em;
   }
 }
 .skillset > h3 {
@@ -120,8 +154,14 @@ header .email:hover {
   -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 470px) {
+  .skillset > h3 {
+    padding: 0 2em;
+  }
+}
 .skills {
   display: flex;
   flex-flow: row wrap;
@@ -130,6 +170,11 @@ header .email:hover {
   margin: 0 3em 3em;
 }
 
+@media screen and (max-width: 534px) {
+  .skills {
+    margin: 0 1em 1em;
+  }
+}
 .skill {
   margin: 1em;
   font-family: "Cereal-book";
@@ -167,6 +212,7 @@ hr {
   -webkit-background-clip: text;
   background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
   margin-bottom: 1.5em;
+  letter-spacing: 0.5px;
 }
 .projects__subheading i {
   animation-duration: 0.3s;
@@ -177,6 +223,123 @@ hr {
   -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+
+.project {
+  display: flex;
+  margin: 3em auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), -2px -2px 6px rgba(255, 255, 255, 0.2);
+  width: 85vw;
+  padding: 1em;
+}
+.project:hover {
+  opacity: 1;
+}
+
+.project__graphic {
+  width: 40%;
+  display: grid;
+  place-content: center;
+  padding: 1em;
+}
+.project__graphic img {
+  width: 100%;
+  height: auto;
+}
+
+.project__text {
+  padding: 2em;
+  padding-left: 1em;
+  width: 60%;
+}
+.project__text h5 {
+  font-size: max(1.5vw, 1.2rem);
+  font-family: "Cereal-bold";
+  margin-bottom: 1em;
+  letter-spacing: 0.5px;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #f799b5 0%, #fae25a 100%);
+}
+.project__text p {
+  margin-bottom: 0.5em;
+  letter-spacing: 0.3px;
+  line-height: 22px;
+}
+.project__text h6 {
+  font-family: "Cereal-book";
+  font-size: max(1.1vw, 13px);
+  color: #bbbaba;
+  margin: 1em 0;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .project__graphic {
+    width: max(75%, 350px);
+  }
+
+  .project__text {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .project {
+    width: 95vw;
+    padding: 0.2em;
+  }
+}
+@media screen and (max-width: 360px) {
+  .project__graphic {
+    width: 315px;
+  }
+}
+.stack {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 3.5em;
+}
+.stack .tech {
+  margin: 0 0.2em 0.5em;
+  color: #1b1b1b;
+  font-family: "Cereal-book";
+  background-color: #fff19fd4;
+  border-radius: 25px;
+  padding: 3px 10px;
+}
+
+.project__link--wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.project__link--wrapper a {
+  margin-bottom: 0.75em;
+}
+
+.project__link {
+  color: #d7d7d7;
+  border: 1px solid #d7d7d7;
+  border-radius: 25px;
+  padding: 5px 20px;
+  transition: all 0.3s;
+  margin-right: 0.6em;
+}
+.project__link:hover {
+  background: #d7d7d7;
+  color: #1b1b1b;
+}
+
+footer > p {
+  text-align: center;
 }
 
 @keyframes bounce {
@@ -200,27 +363,6 @@ hr {
   100% {
     transform: translateY(0);
   }
-}
-.project {
-  display: flex;
-  margin: 3em auto;
-  border-radius: 5px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), -2px -2px 6px rgba(255, 255, 255, 0.2);
-  width: 80vw;
-}
-.project h5, .project h6 {
-  color: white;
-  font-family: "Cereal-bold";
-}
-
-.project__graphic {
-  margin-right: 1em;
-  padding: 1em;
-}
-
-.project__text {
-  padding: 1em;
-  padding-left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
